@@ -6,7 +6,8 @@ from datetime import datetime, timedelta
 RTC_CONFIGURATION = RTCConfiguration({"iceServers": [{"urls": ["stun4.l.google.com:19302"]}]})
 idlist =[22,23,24,26,110,157,158,159,160,161,130,243]
 ratioList = []
-
+import cv2
+import av
 blinkCounter = 0
 counter = 0
 t = datetime.now()  
@@ -16,11 +17,11 @@ class VideoTransformer(VideoTransformerBase):
     
     def recv(self,image):
         import numpy as np
-        import av
+        
         import cvzone
         import mediapipe as mp
         from cvzone.FaceMeshModule import FaceMeshDetector
-        import cv2
+        
         
         
         frame1 = image.to_ndarray(format="bgr24")
