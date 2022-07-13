@@ -1,13 +1,13 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
-
+import cv2
+import av
 from datetime import datetime, timedelta
        
 RTC_CONFIGURATION = RTCConfiguration({"iceServers": [{"urls": ["stun4.l.google.com:19302"]}]})
 idlist =[22,23,24,26,110,157,158,159,160,161,130,243]
 ratioList = []
-import cv2
-import av
+
 blinkCounter = 0
 counter = 0
 t = datetime.now()  
