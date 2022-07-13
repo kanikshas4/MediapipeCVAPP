@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
-import cv2
+
 from datetime import datetime, timedelta
        
 RTC_CONFIGURATION = RTCConfiguration({"iceServers": [{"urls": ["stun4.l.google.com:19302"]}]})
@@ -20,7 +20,7 @@ class VideoTransformer(VideoTransformerBase):
         import cvzone
         import mediapipe as mp
         from cvzone.FaceMeshModule import FaceMeshDetector
-        
+        import cv2
         
         
         frame1 = image.to_ndarray(format="bgr24")
