@@ -16,8 +16,9 @@ class VideoTransformer(VideoTransformerBase):
     
     def recv(self,image):
         import numpy as np
-        import cv2
 	import av
+        import cv2
+	
         import cvzone
         import mediapipe as mp
         from cvzone.FaceMeshModule import FaceMeshDetector
